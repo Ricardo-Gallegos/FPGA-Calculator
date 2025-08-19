@@ -1,4 +1,4 @@
-# FPGA-Calculator
+# Ricardo's FPGA-Calculator
 Verilog Calculator System
 
 This project implements a 4-digit BCD calculator using Verilog that can perform various arithmetic operations based on switch inputs. The results are displayed on a 7-segment 8-digit display using time-division multiplexing.
