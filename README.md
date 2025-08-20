@@ -2,7 +2,7 @@
 Verilog Calculator System
 
 This project implements a 4-digit BCD calculator using Verilog that can perform various arithmetic operations based on switch inputs. The results are displayed on a 7-segment 8-digit display using time-division multiplexing.
-
+_____________________________________________________________________________________________________________
 🧠 Overview
 
 The system uses a variety of interconnected Verilog modules to:
@@ -14,7 +14,7 @@ Perform operations like addition, subtraction, multiplication, division, and mod
 Convert results back to BCD
 
 Display them using 7-segment displays
-
+_____________________________________________________________________________________________________________
 ⚙️ Top-Level Module
 main_top
 module main_top(clk, sw, an, seg);
@@ -41,7 +41,7 @@ an: Anode signals for 7-segment multiplexing
 seg: 7-segment segment values (A-G)
 
 This module instantiates the entire calculator system.
-
+_____________________________________________________________________________________________________________
 🧮 Calculator Core
 calculator_com
 
@@ -52,7 +52,7 @@ Accepts inputs and control signals
 Routes data through input selection, BCD-to-binary conversion, arithmetic operations, binary-to-BCD conversion
 
 Drives display modules
-
+_____________________________________________________________________________________________________________
 🧩 Module Descriptions
 mulswitch
 module mulswitch(clk, m, reset, inp1, inp2, num11, num12, num21, num22);
@@ -94,19 +94,19 @@ operations
 module operations(a, b, c, bin2, bin1, cout);
 Performs one of the following operations based on inputs a, b, c:
 
-a	b	c	Operation
-0	0	1	Addition
-0	1	0	Subtraction
-0	1	1	Multiplication
-1	0	0	Division
-1	0	1	Modulus
+a	b	c	Operation<br>
+0	0	1	Addition<br>
+0	1	0	Subtraction<br>
+0	1	1	Multiplication<br>
+1	0	0	Division<br>
+1	0	1	Modulus<br>
 
 Outputs a 14-bit result (cout).
 
 bin_to_bcd
 module bin_to_bcd(cout, num4, num3, num2, num1);
 Converts binary result into 4-digit BCD (thousands, hundreds, tens, units) for display.
-
+_____________________________________________________________________________________________________________
 🖥️ Display Format
 
 The 8-digit 7-segment display is used as:
@@ -148,7 +148,7 @@ Left 4 digits: 0023
 Right 4 digits: 0017
 
 Output: 0040 (result)
-
+_____________________________________________________________________________________________________________
 🔧 Compilation & Simulation
 
 You can simulate this project using:
@@ -160,8 +160,8 @@ Vivado Simulator
 Icarus Verilog with GTKWave
 
 Each module is designed to be testable independently.
-
+_____________________________________________________________________________________________________________
 📁 File Structure
 
-All code is in a single file/module for simplicity. For large projects, consider splitting each module into its own .v file and managing with a top-level testbench.
+All code is in a single file/module for simplicity. 
 
